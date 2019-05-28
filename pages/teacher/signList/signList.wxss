@@ -1,0 +1,71 @@
+/* pages/techaerll/techaerll.wxss */
+/* pages/classpage/classpage.wxss */
+.Visualization{
+
+  border: 1rpx solid red;
+  width: 740rpx;
+  height: 300rpx
+}
+
+
+.shoewif{
+  border-top: 1rpx solid #eee;
+   border-bottom: 1px solid #eee; 
+  width: 720rpx;
+  height: 600rpx;
+  margin: 10rpx;
+  margin-top: 86rpx
+
+}
+
+.shoewif_ti{ 
+    color:black;
+    width: 730rpx;
+    height: 63rpx;
+    border-bottom: 1px solid #eee; 
+
+}
+.shoewif_tit{
+width: 160rpx;
+height: 60rpx;
+float: left;
+margin-top: 0rpx ;
+font-size: 35rpx;
+display: table-row;
+text-align: center
+}
+.shoewif_tit1{
+width: 160rpx;
+height: 60rpx;
+float: left;
+margin-top: 0rpx ;
+margin-left: 100rpx;
+font-size: 35rpx;
+display: table-row;
+text-align: center
+}
+.shoewif_tit_one{
+  margin-left: 20rpx
+}
+
+.canvas {
+width: 800rpx;
+height: 1000rpx;
+}
+.SignIn{
+  
+  width: 740rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  /* 分散对齐 */
+  display: flex;
+  justify-content: space-between;  
+ 
+}
+.SignIn_one{
+  width:100%;
+  height: 60rpx;
+  text-align: center;
+  border-bottom: 1rpx solid gainsboro;
+  background-color: white;
+}

@@ -1,0 +1,24 @@
+.Visualization{
+background-color: white;
+  width: 740rpx;
+  height: 400rpx;
+  margin-top :10rpx;
+  
+}
+.SignIn{
+  
+  width: 740rpx;
+  height: 100rpx;
+  margin-top: 40rpx;
+  /* 分散对齐 */
+  display: flex;
+  justify-content: space-between;  
+ 
+}
+.SignIn_one{
+  width: 350rpx;
+  height: 60rpx;
+  text-align: center;
+  border-bottom: 1rpx solid gainsboro;
+  background-color: white;
+}

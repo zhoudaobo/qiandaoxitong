@@ -1,0 +1,39 @@
+ <view class='cu-tag round bg-blue light SignIn_one'>孩子签到情况</view>
+<view class="Visualization ">
+  <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>孩子课程详情
+  </view>
+</view>
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <view class="cu-item {{menuArrow?'arrow':''}}">
+      </view>
+      <scroll-view scroll-y="true">
+        <!-- 学生详细签到情况  -->
+        <block wx:for="{{wlist}}" wx:key='name'>
+          <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+            <view class="cu-item {{menuArrow?'arrow':''}}">
+              <view class="content">
+                <view class="cu-item {{menuArrow?'arrow':''}}">
+                  <view class="content">
+                    <text class="cuIcon-tagfill text-red"></text>
+                    <text class="text-grey">{{item.subjname}}</text>
+                  </view>
+                  <view class="action">
+                    <text class="cu-tag round bg-red light ">{{item.teachername}}</text>
+                    <text class="cu-tag round bg-blue light">{{'星期'+item.xqj}}</text>
+                    <text class="cu-tag round bg-green light">{{'第'+item.djj+'节'}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

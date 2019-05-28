@@ -1,0 +1,4 @@
+/* pages/parent/my/my.wxss */
+.e{
+  background: rgb(132, 177, 219);
+}

@@ -1,0 +1,134 @@
+<!--导航菜单-->
+<view class="navbar" style=" z-index:50">
+  <!--循环-->
+  <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+    <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+    {{item}}
+    <!--<text  bindtap="navbarTap">{{item}}</text>-->
+  </view>
+</view>
+
+<!--半月维保-->
+<view hidden="{{currentTab !== 0}}" id="one">
+  <template is="list" data="{{maintainRecordlist}}" />
+  <view class="cu-bar bg-white action">
+    <view class="">
+      <text class="cuIcon-title text-pink"></text> 学校风光
+    </view>
+  </view>
+  <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiperList}}" wx:key>
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </swiper-item>
+  </swiper>
+  <!-- <view class="action">
+    <text class="cuIcon-title text-pink"></text> 图集
+ </view> -->
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue">图集</text>
+    </view>
+  </view>
+  <view class="grid col-3 padding-sm">
+    <view class="padding-sm" wx:for="{{ColorList}}" wx:key>
+      <view class="bg-{{item.url}} padding radius text-center shadow-blur">
+        <image src='{{item.url}}' style='height:200rpx;width:220rpx;'></image>
+        <view class="text-lg"></view>
+        <view class="margin-top-sm text-Abc">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--月度维保-->
+<view hidden="{{currentTab !== 1}}" id="one" class='introduceal' >
+ <view  class='introduce'>
+ <text class='text'>
+凯里学院源于1958年成立的黔东南大学，历经黔东南民族师专等多校名更换和曲折发展，2006年经教育部批准升格为普通本科院校，是自治州目前唯一的本科院校。\n \n </text>
+
+<text class='text'>目前，校园占地面积1676亩，校舍建筑面积32.5万平方米；教学科研仪器设备总值1.297亿元，馆藏纸质图书113.54万册、电子图书436万余册;在校生（折合数）11458人，教职工914人，其中专任教师668人；正高职称121人，博士114人。学校现有本科专业50个，2018年招生专业43个，已获学士学位授权专业36个，有国家级专业综合改革试点专业1个、贵州省区域“一流专业”重点建设项目（培育）专业1个、省级专业综合改革试点专业8个、省级特色专业2个、省级卓越人才教育培养计划项目3个。有1个贵州省区域一流建设培育学科，8个省级重点（支持）学科。建有特色重点实验室2个、实验教学示范中心3个、协同创新中心1个、人文社科研究基地1个、院士工作站1个、民族古籍研究基地1个、民汉双语服务基地1个，另有黔东南侗学重点研究基地和州级智库“黔东南发展研究院”。\n \n</text>
+
+<text class='text'>学校坚持开放办学，与黔东南州及各县市建有20多个产学研合作共建项目，与中科曙光、凤凰教育集团、中科汉天下、圆通科技等知名企业建有产教融合项目和协同育人项目，与中国科学院有共建院士工作站项目，与杭州师范大学、浙江工业大学、同济大学、北京建筑大学、西南民族大学、济南大学等国内高校及台湾万能科技大学、大叶大学、嘉南药理大学等境外高校建有本科生交流项目，与美国佩斯大学、泰国苏南拉里理工大学等多所国外高校有国际学生交流项目和大学生夏令营项目等。\n \n</text>
+
+<text class='text'>学校先后入选教育部?曙光集团“数据中国?百校工程”项目试点院校、教育部?凤凰卫视集团首批“高校数字媒体产教融合创新应用示范基地项目”学校、教育部“科学工作能力提升计划（百千万工程）”首批试点院校；先后荣获首批“国家级语言文字规范化示范学校”、“全国第一批节约型公共机构示范单位”、“国家非物质文化遗产传承人群培训学校”、“全国示范院士专家工作站”、全国首批国防教育特色学校、“全国职工教育培训示范点”荣誉称号；是贵州省第一批“绿色大学”、贵州省首批“特色文化学校”、贵州省普通本科高校向应用型转型发展试点单位和贵州省“十三五”硕士学位授予立项建设单位。\n \n</text>
+  </view>
+</view>
+
+<!--半年维保-->
+<view hidden="{{currentTab !== 2}}" id="one">
+  <template is="list" data="{{maintainRecordlist}}" />
+
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>课程情况
+    </view>
+  </view>
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <view class="content">
+        <view class="cu-item {{menuArrow?'arrow':''}}">
+        </view>
+        <scroll-view scroll-y="true">
+          <!-- 学生详细签到情况  -->
+          <block wx:for="{{studentinfo}}" wx:key='name'>
+            <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+              <view class="cu-item {{menuArrow?'arrow':''}}">
+                <view class="content">
+                  <view class="cu-item {{menuArrow?'arrow':''}}">
+                    <view class="content">
+                      <text class="cuIcon-tagfill text-red"></text>
+                      <text class="text-grey">{{item.no}}</text>
+                    </view>
+                    <view class="action">
+                      <text class="cu-tag round bg-olive light">{{item.username}}</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--年度维保-->
+<view hidden="{{currentTab !== 3}}" id="one">
+  <template is="list" data="{{maintainRecordlist}}" /> 4
+</view>
+
+<!--数据初始加载-->
+<view hidden="{{currentTab !== 4}}" id="one">
+  <template is="list" data="{{maintainRecordlist}}" />
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-title text-pink"></text> 学校风光
+    </view>
+  </view>
+  <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiperList}}" wx:key>
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </swiper-item>
+  </swiper>
+  <!-- <view class="action">
+    <text class="cuIcon-title text-pink"></text> 图集
+  </view> -->
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>图集
+    </view>
+  </view>
+  <view class="grid col-3 padding-sm">
+    <view class="padding-sm" wx:for="{{ColorList}}" wx:key>
+      <view class="bg-{{item.url}} padding radius text-center shadow-blur">
+        <image src='{{item.url}}' style='height:200rpx;width:220rpx;'></image>
+        <view class="text-lg"></view>
+        <view class="margin-top-sm text-Abc">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

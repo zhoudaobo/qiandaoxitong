@@ -1,0 +1,73 @@
+/**index.wxss**/
+.ClassNavigation{
+  margin-left: 2%;
+  width: 95%;
+  height: 60rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid gainsboro;
+  content: 0rpx
+}
+
+.precedence {
+  width: 100%;
+  height: 300rpx;
+  /* background-color: rgba(0, 0, 0, 0.04); */
+  margin-top: 20rpx;
+}
+
+.precedenceCont {
+  width: 680rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border-bottom: 1rpx solid gainsboro;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  
+}
+
+.preImg {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 26rpx;
+  margin-left: 85%;
+}
+
+.Visualization{
+  width: 740rpx;
+  height: 420rpx;
+  margin-top: 20rpx;
+  background-color:white;
+}
+.canvas{
+width: 740rpx;
+height: 410rpx;
+
+}
+.content {
+    width: 100%;
+    background-color:white;
+    overflow-y: auto;
+}
+#mychart-one {
+    position: absolute; 
+    top: 0;
+    height: 50%;
+    left: 0;
+    right: 0;
+}
+#mychart-two {
+    position: absolute; 
+    top: 50%;
+    height: 50%;
+    left: 0;
+    right: 0;
+}
+  .place{
+    margin-left: 200rpx;
+    margin-right: 60rpx;
+  }
+
+  .place-w{
+    margin-left: 80rpx;
+  }

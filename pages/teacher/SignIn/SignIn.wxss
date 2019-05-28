@@ -1,0 +1,81 @@
+/* pages/facelogin/facelogin.wxss */
+.camera{
+ 
+  width: 80%; 
+  height: 280px;
+  margin-left: 80rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  
+}
+.center{
+ background: url('http://image.chubanyun.net/images/TRQ/user-head.png');
+}
+.box {
+  border-bottom: 1rpx solid rgb(211, 206, 206);
+  width: 100%;
+  height: 80rpx;
+
+ 
+}
+.box12 {
+  border-bottom: 1rpx solid rgb(211, 206, 206);
+  width: 100%;
+  height: 100rpx;
+  /* margin-top: 60rpx; */
+  display: flex;
+  justify-content: space-around;
+ 
+}
+.box1 {
+  border: 1rpx solid rgb(211, 206, 206);
+  width: 100%;
+  height: 80rpx;
+  /* margin-top: 20rpx; */
+   display: flex;
+  justify-content: space-around; 
+ 
+}
+.text{
+       font-size:40rpx;
+            /* text-align:center; */
+            text-align: left;
+        font-family: 微软雅黑;
+            font-size: 35rpx;
+            color: rgb(43, 41, 41);
+            /* display: table-cell; */
+            /* vertical-align:middle; */
+}
+.but{
+  width: 50%; 
+}
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}

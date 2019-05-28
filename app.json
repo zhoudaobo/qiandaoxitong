@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/student/home/home",
+    "pages/student/notice/noticelist",
+    "pages/student/timetable/timetable",
+    "pages/student/index/index",
+    "pages/student/logs/logs",
+    "pages/student/pesonel/pesonel",
+    "pages/teacher/home/index",
+    "pages/teacher/techaerll/techaerll",
+    "pages/teacher/TeacherTimetable/TeacherTimetable",
+    "pages/parent/home/home",
+    "pages/parent/my/my",
+    "pages/teacher/my/my",
+    "pages/teacher/SignIn/SignIn",
+    "pages/teacher/signList/signList",
+    "pages/parent/intruct/intruct",
+    "pages/parent/look/look",
+    "pages/parent/notice/notice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": false
+}

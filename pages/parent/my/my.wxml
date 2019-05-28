@@ -1,0 +1,33 @@
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>     <text>姓名：</text>
+  </view>
+  <view class="action">
+   {{username}}
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>   <text>电话：</text>
+  </view>
+  <view class="action">
+  {{contact}}
+   
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>   <text>家庭住址：</text>
+  </view>
+  <view class="action">
+     {{home_addr}}
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top height" bindtap='exit'>
+  <view class="action" >
+    <text class="cuIcon-title text-orange "></text>      <text>退出：</text>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="exit" data-target="Modal">退出</button>
+  </view>
+</view>

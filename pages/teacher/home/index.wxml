@@ -1,0 +1,88 @@
+
+<!-- <scroll-view scroll-y class="scrollPage"> -->
+  <view class="UCenter-bg">
+  <image class='png' src='http://119.23.210.79:8080/zhugeliang/upload/{{img}}'></image>
+    <!-- <open-data type="userAvatarUrl" class="png"></open-data> -->
+    <view class="text-xl">{{username}}
+      <text class="text-df">{{contact}}</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>{{no}}</text>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm" bindtap='clic'>
+        <text class="cuIcon-attentionfill"></text>签到</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      
+      <view class="margin-top-sm" bindtap='clicone'>
+        <text class="cuIcon-favorfill"></text> 查看</view>
+    </view>
+    <view class="flex flex-sub flex-direction" bindtap='my'>
+      <view class="margin-top-sm">
+        <text class="cuIcon-fork"></text> 我的</view>
+    </view>
+  </view>
+  <view class="precedence">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+        <view class="action">
+          <text class="cuIcon-title text-orange  height:200rpx;"></text> 授课班级
+        </view>
+        <view class="action">
+        </view>
+      </view>
+       <!-- 滚动条 -->
+  <scroll-view scroll-y="true" style='height:200epx;'>
+ 
+    <!-- 显示班级  -->
+  
+       <view class="precedence">
+      <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
+        <view class="cu-dialog" >
+          <scroll-view scroll-y   style='height:200epx;'>
+            <view class="cu-list menu text-left solid-top">
+              <view class="cu-item">
+                <view class="content">
+                  <text class="text-grey">短边框</text>
+                </view>
+                <view class="action">
+                  <switch bindchange="menuBorder"></switch>
+                </view>
+              </view>
+              <view class="cu-item">
+                <view class="content">
+                  <text class="text-grey">箭头</text>
+                </view>
+                <view class="action">
+                  <switch bindchange="menuArrow"></switch>
+                </view>
+              </view>
+              <view class="cu-item">
+                <view class="content">
+                  <text class="text-grey">卡片</text>
+                </view>
+                <view class="action">
+                  <switch bindchange="menuCard"></switch>
+                </view>
+              </view>
+
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="cu-list menu {{menuBorder?'':'sm-border'}} {{menuCard?'':'card-menu margin-top'}}">
+
+        <view class="cu-item {{menuArrow?'':'arrow'}}" wx:for="{{classname}}" bindtap='inlook'>
+          <view class="content" data-classid='{{item.classid}}'>
+            <text class="cuIcon-btn text-blue"></text>
+            <text class="text-grey">{{item.classname}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- </scroll-view> -->

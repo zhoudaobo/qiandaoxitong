@@ -1,0 +1,42 @@
+<view class='cu-tag round bg-blue light SignIn_one'>
+  17计本3近期签到情况</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+</view>
+
+
+<view class='shoewif'>
+  <view class="precedence">
+    <!-- 滚动条 -->
+    <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+      <view class="cu-item {{menuArrow?'arrow':''}}">
+        <view class="content">
+          <view class="cu-item {{menuArrow?'arrow':''}}">
+          </view>
+          <scroll-view scroll-y="true">
+            <!-- 学生详细签到情况  -->
+            <block wx:for="{{studentinfo}}" wx:key='name'>
+              <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+                <view class="cu-item {{menuArrow?'arrow':''}}">
+                  <view class="content">
+                    <view class="cu-item {{menuArrow?'arrow':''}}">
+                      <view class="content">
+                        <text class="cuIcon-tagfill text-red"></text>
+                        <text class="text-grey">{{item.studentID}}</text>
+                      </view>
+                      <view class="action">
+
+                        <text class="cu-tag round bg-olive light">{{item.name}}</text>
+                        <text class="cu-tag round bg-olive light">{{item.Checkin}}</text>
+                        <text class="cu-tag round bg-olive light">{{item.Forcheckin}}</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

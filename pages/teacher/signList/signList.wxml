@@ -1,0 +1,50 @@
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> {{grade}}
+  </view>
+  <view class="action" bindtap="showModal" data-target="Modal" data-grade='{{grade}}' data-courseName='{{courseName}}'>
+    <button class="cu-btn bg-green shadow">签到</button>
+  </view>
+</view>
+
+<view class='SignIn'>
+  <view class='SignIn_one cu-tag round bg-green light'>已签 {{yq}}/人</view>
+  <view class='SignIn_one cu-tag round bg-red light'>未签 {{wqd}}/人</view>
+
+ </view>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>签到情况
+  </view>
+</view>
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="content">
+      <view class="cu-item {{menuArrow?'arrow':''}}">
+      </view>
+      <scroll-view scroll-y="true">
+        <!-- 学生详细签到情况  -->
+        <block wx:for="{{studentinfo}}" wx:key='name'>
+          <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+            <view class="cu-item {{menuArrow?'arrow':''}}">
+              <view class="content">
+                <view class="cu-item {{menuArrow?'arrow':''}}">
+                  <view class="content">
+                    <text class="cuIcon-tagfill text-red"></text>
+                    <text class="text-grey">{{item.no}}</text>
+                  </view>
+                  <view class="action">
+                    <text class="cu-tag round bg-olive light">{{item.username}}</text>
+                    <view wx:if="{{item.status==1}}" class='cu-tag round bg-green light'>已签
+                    </view>
+                    <view wx:else class='cu-tag round bg-red light'>未签</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "家长",
+  "navigationBarBackgroundColor": "#3eb64a",
+  "ec-canvas": "../../utils/ec-canvas/ec-canvas"
+}

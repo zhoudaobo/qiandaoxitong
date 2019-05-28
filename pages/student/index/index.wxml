@@ -1,0 +1,20 @@
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+
+
+  <!-- 课程列表 -->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 课程列表&签到情况
+    </view>
+  </view>
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'':'card-menu margin-top'}}">
+    <view class="cu-item cu-nab {{menuArrow?'arrow':''}}" wx:for="{{classname}}" >
+      <view class="content">
+        <text class="cuIcon-btn text-green"></text>
+        <text class="text-grey">{{item.name}}</text>
+         <view class='place cu-tag round bg-green light'>以前</view>
+         <view  class='place-w cu-tag round bg-red light'>未签</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

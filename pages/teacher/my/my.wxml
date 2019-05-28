@@ -1,0 +1,41 @@
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>     <text>姓名：</text>
+  </view>
+  <view class="action">
+  {{username}}
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>   <text>工号：</text>
+  </view>
+  <view class="action">
+  {{no}}
+   
+  </view>
+</view>
+<!-- <view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>   <text>系部：</text>
+  </view>
+  <view class="action">
+     {{myinfo.departmentname}}学生科
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top height">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>     <text > 分院：</text>
+  </view>
+  <view class="action">
+  {{myinfo.classname}}大数据工程学院
+  </view>
+</view> -->
+<view class="cu-bar bg-white margin-top height" bindtap='exit'>
+  <view class="action" >
+    <text class="cuIcon-title text-orange "></text>      <text>退出：</text>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="exit" data-target="Modal">退出</button>
+  </view>
+</view> 
