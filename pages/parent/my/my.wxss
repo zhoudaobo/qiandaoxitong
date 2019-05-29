@@ -2,3 +2,7 @@
 .e{
   background: rgb(132, 177, 219);
 }
+.bottom{
+ margin-top: 600rpx;
+margin-left: 270rpx;
+}

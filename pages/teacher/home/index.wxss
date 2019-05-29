@@ -55,3 +55,10 @@ map,.mapBox{
   border: 2px solid #fff;  
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
 }
+.notice1{
+  margin-left: 290rpx;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+  font-family: 隶书；
+  
+}

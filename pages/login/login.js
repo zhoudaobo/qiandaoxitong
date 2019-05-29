@@ -127,7 +127,7 @@ Page({
         imgurl = d.tempImagePath;
 
         wx.uploadFile({
-          url: 'http://119.23.210.79/zhugeliang/wudi/faceLogin',
+          url: 'https://www.wxpy.live/zhugeliang/wudi/faceLogin',
           filePath: d.tempImagePath,
           name: 'file',
           header: {

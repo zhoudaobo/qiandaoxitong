@@ -58,12 +58,11 @@ Page({
       title: '提示',
       content: '是否确认退出',
       success: function (res) {
-        console.log(res)
         if (res.confirm) {
           // console.log('用户点击确定')
           wx.clearStorageSync();
           //页面跳转
-          wx.switchTab({
+          wx.redirectTo({
             url: '../../login/login',
           })
         } else if (res.cancel) {

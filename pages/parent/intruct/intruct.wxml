@@ -71,17 +71,17 @@
         </view>
         <scroll-view scroll-y="true">
           <!-- 学生详细签到情况  -->
-          <block wx:for="{{studentinfo}}" wx:key='name'>
+          <block wx:for="{{zhuanye}}" wx:key='name'>
             <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
               <view class="cu-item {{menuArrow?'arrow':''}}">
                 <view class="content">
                   <view class="cu-item {{menuArrow?'arrow':''}}">
                     <view class="content">
                       <text class="cuIcon-tagfill text-red"></text>
-                      <text class="text-grey">{{item.no}}</text>
+                      <text class="text-grey">{{item.majorname}}</text>
                     </view>
                     <view class="action">
-                      <text class="cu-tag round bg-olive light">{{item.username}}</text>
+                      <text class="cu-tag round bg-olive light">{{item.depname}}</text>
                     </view>
                   </view>
                 </view>

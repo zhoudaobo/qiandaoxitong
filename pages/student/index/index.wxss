@@ -71,3 +71,10 @@ height: 410rpx;
   .place-w{
     margin-left: 80rpx;
   }
+  .notice1{
+  margin-left: 290rpx;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+  font-family: 隶书；
+  
+}

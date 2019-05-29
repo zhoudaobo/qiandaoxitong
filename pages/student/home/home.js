@@ -12,13 +12,14 @@ Page({
     grade: '17计本1',
     stuno: '12323423',
     notice: [],
-    img: 'xiao4.jpg'
+    img: 'xiao4.jpg',
+    length: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     //从缓存里面获取ID和username
     var username = myUtils.get("username");
 
@@ -32,7 +33,7 @@ Page({
       username: username,
       // img: img
     })
-  
+
     //获取学术信息
     http.getInfo({
       data: {
@@ -49,7 +50,7 @@ Page({
           grade: grade,
         })
       },
-      fail: function(res) {
+      fail: function (res) {
         wx.showToast({
           title: '页面加载失败...',
         })
@@ -57,14 +58,17 @@ Page({
     })
     // 获取通知信息
     http.getnotice({
-    data:{
-      id: this.data.id, 
-    },
+      data: {
+        id: this.data.id,
+      },
       success: res => {
         console.log(res)
-  var list = res.data
+        var list = res.data
+        var length = list.length
+        console.log(length)
         this.setData({
-          notice:list
+          notice: list,
+          length: length
         })
       }
     })
@@ -73,49 +77,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
   noticelist: res => {
@@ -140,7 +144,7 @@ Page({
       url: '../index/index',
     })
   },
-  my: function() {
+  my: function () {
     wx.navigateTo({
       url: '../pesonel/pesonel',
     })

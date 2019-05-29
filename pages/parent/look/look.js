@@ -12,6 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list: [],
+    list1: [],
     type: 'column',
     ec: {
       lazyLoad: true // 延迟加载
@@ -33,17 +35,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // http.datasee({
-    //   data: {
-    //     id: 1558691255695260,
-    //     classid: 1558232124945
-    //   },
-    //   success: (res) => {
-    //     console.log(res)
-    //     dataList = res.data;
-    //     this.init_echarts();//初始化图表
-    //   }
-    // }); 
+
     var that = this;
     var id = myUtils.get('id')
     http.getpare({
@@ -92,17 +84,24 @@ Page({
         id: id
       },
       success: (res) => {
-        // console.log(res)
-        // var list = []
-        var count = []
-        var length=res.list.length;
+        console.log(res)
+        var list = []
+        var list1 = []
+        var length = res.list.length;
         for (let i = 0; i < length; i++) {
           var coursename = res.list[i].coursename;
-           var lsit = coursename
+          var count = res.list[i].count;
+          // count.push(count);
+          list.push(coursename);
+          list1.push(count)
+          console.log(list1)
+          this.setData({
+            list: list,
+            list1: list1
+          })
         }
-        console.log(list)
-          dataList = res.data;
-          this.init_echarts(); //               
+        dataList = res.data;
+        this.init_echarts(); //               
         // }
       }
     });
@@ -130,13 +129,13 @@ Page({
     var option = {
       xAxis: {
         type: 'category',
-        data: ['java', '数据库', '数据结构', 'Linux', '教育学', '民族学']
+        data: this.data.list
       },
       yAxis: {
         type: 'value'
       },
       series: [{
-        data: [1,5,3,6,10,5],
+        data: this.data.list1,
         type: 'bar'
       }]
     }

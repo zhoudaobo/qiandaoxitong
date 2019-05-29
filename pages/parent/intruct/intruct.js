@@ -1,8 +1,9 @@
 // pages/home/home.js
 var app = getApp()
+import http from '../../../utils/api'
 Page({
   data: {
-    studentinfo: [{ 'no': '计算机科学与技术', 'username': '大数据'}, { 'no': '计算机科学与技术', 'username': '大数据' }, { 'no': '计算机科学与技术', 'username': '大数据',}],
+ 
  
     ColorList: app.globalData.ColorList ,
     navbar: ['学校风光','学校概括', '所设专业'],
@@ -38,6 +39,17 @@ Page({
       type: 'image',
         url: 'http://img0.imgtn.bdimg.com/it/u=334960003,522352793&fm=26&gp=0.jpg'
     }],
+    zhuanye:[]
+  },
+  onLoad(options){
+    http.getzhuanye({
+      success:res=>{
+      var list=res.list
+      this.setData({
+        zhuanye:list
+      })
+      }
+    })
   },
   // 导航切换监听
   navbarTap: function (e) {

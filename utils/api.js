@@ -42,6 +42,12 @@ function datasee(params) {//数据可视化
 function classArr(params) {//教师获取每个学生总的签到次数
   http('/classArr', 'post', params)
 }
+function stuSubArr(params) {//获取学生每节课的签到次数
+  http('/stuSubArr', 'post', params)
+}
+function getzhuanye(params) {//获取学生每节课的签到次数
+  http('/school', 'post', params)
+}
 export default { // 暴露接口
   getInfo,
   getnotice,
@@ -54,6 +60,8 @@ export default { // 暴露接口
   getpare,
   gettsign,
   datasee,
-  classArr
+  classArr,
+  stuSubArr,
+  getzhuanye
   // getsign,
 }

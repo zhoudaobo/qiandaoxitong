@@ -85,11 +85,9 @@ Page({
           // console.log('用户点击确定')
           wx.clearStorageSync();
           //页面跳转
-          wx.switchTab({
+          wx.redirectTo({
             url: '../../login/login',
           })
-
-
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

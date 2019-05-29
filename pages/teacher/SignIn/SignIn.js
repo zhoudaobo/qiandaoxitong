@@ -160,7 +160,7 @@ Page({
         imgurl = d.tempImagePath;
         // console,log(this.data.classid)
         wx.uploadFile({
-          url: 'http://192.168.43.33:8086/wudi/faceSignIn',
+          url: 'https://www.wxpy.live/zhugeliang/wudi/faceSignIn',
           filePath: d.tempImagePath,
           name: 'file',
           header: {

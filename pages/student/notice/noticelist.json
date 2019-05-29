@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "通知",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
 }

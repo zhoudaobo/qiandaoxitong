@@ -1,8 +1,8 @@
 
 <!-- <scroll-view scroll-y class="scrollPage"> -->
   <view class="UCenter-bg">
-  <image class='png' src='http://119.23.210.79:8080/zhugeliang/upload/{{img}}'></image>
-    <!-- <open-data type="userAvatarUrl" class="png"></open-data> -->
+  <!-- <image class='png' src='http://119.23.210.79:8080/zhugeliang/upload/{{img}}'></image> -->
+    <open-data type="userAvatarUrl" class="png"></open-data>
     <view class="text-xl">{{username}}
       <text class="text-df">{{contact}}</text>
     </view>
@@ -18,8 +18,8 @@
     </view>
     <view class="flex flex-sub flex-direction solid-right">
       
-      <view class="margin-top-sm" bindtap='clicone'>
-        <text class="cuIcon-favorfill"></text> 查看</view>
+    <view class="margin-top-sm" >
+        <!-- <!-- <text class="cuIcon-favorfill"></text> --> </view>
     </view>
     <view class="flex flex-sub flex-direction" bindtap='my'>
       <view class="margin-top-sm">
@@ -73,6 +73,7 @@
           </scroll-view>
         </view>
       </view>
+      <view wx:if='{{length>0}}'>
       <view class="cu-list menu {{menuBorder?'':'sm-border'}} {{menuCard?'':'card-menu margin-top'}}">
 
         <view class="cu-item {{menuArrow?'':'arrow'}}" wx:for="{{classname}}" bindtap='inlook'>
@@ -83,6 +84,10 @@
         </view>
       </view>
     </view>
+     <view class='notice1' wx:elif='{{length==0}}'>您还没有课程哟~ ~</view>
+    </view>
+    
   </scroll-view>
 </view>
+
 <!-- </scroll-view> -->

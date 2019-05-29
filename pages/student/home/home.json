@@ -3,7 +3,7 @@
 
     "navigationBarBackgroundColor": "#3eb64a",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "小程序",
+    "navigationBarTitleText": "人脸签到",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false

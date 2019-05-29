@@ -16,7 +16,7 @@ module.exports = {
     }
     // 192.168.1.22
     wx.request({
-      url: 'http://127.0.0.1:8086/wudi' + url, // 就是拼接上前缀,此接口域名是开放接口，可访问
+      url: 'https://www.wxpy.live/zhugeliang/wudi' + url, // 就是拼接上前缀,此接口域名是开放接口，可访问
       method: method == 'post' ? 'post' : 'get', // 判断请求类型，除了值等于'post'外，其余值均视作get
       data,
       header: {

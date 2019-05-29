@@ -13,14 +13,15 @@ Page({
     contact: '',
     select: false,
     notice: [],
-preaMsage:[],
-    img: 'xiao4.jpg'
+    preaMsage: [],
+    img: 'xiao4.jpg',
+    length: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     var that = this;
     var username = myUtils.get("username");
     var id = myUtils.get("id");
@@ -37,7 +38,7 @@ preaMsage:[],
         id: id,
       },
       success: res => {
-        // console.log(res.data[].contact)
+        // console.log(res)
         that.setData({
           contact: res.data[0].contact,
           remark: res.data[0].remark
@@ -45,7 +46,7 @@ preaMsage:[],
         wx.setStorageSync("preaMsage", res.data[0]) //缓存家长的基本信息
       },
 
-      fail: function(res) {
+      fail: function (res) {
         wx.showToast({
           title: '页面加载失败...',
         })
@@ -57,68 +58,70 @@ preaMsage:[],
       success: res => {
         // console.log(res)
         var list = res.data
+        var length = list.length
         this.setData({
-          notice: list
+          notice: list,
+          length: length
         })
       }
     })
-//获取家长对应孩子的信息
-// http.getpare({
-//   data:{
-//     id:id
-//   },
-//   success:res=>{
-//     console.log(res)
-//   }
-// })
+    //获取家长对应孩子的信息
+    // http.getpare({
+    //   data:{
+    //     id:id
+    //   },
+    //   success:res=>{
+    //     console.log(res)
+    //   }
+    // })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
   my: res => {
@@ -141,7 +144,7 @@ preaMsage:[],
       url: '../notice/noticelist?notice_per_name=' + notice_per_name + '&notice_time=' + notice_time + '&notice_subject=' + notice_subject + '&title=' + title,
     })
   },
-  look:res=>{
+  look: res => {
     wx.navigateTo({
       url: '../look/look',
     })

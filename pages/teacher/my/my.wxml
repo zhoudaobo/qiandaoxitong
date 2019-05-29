@@ -39,3 +39,4 @@
     <button class="cu-btn bg-green shadow" bindtap="exit" data-target="Modal">退出</button>
   </view>
 </view> 
+  <view class='bottom'>睿翼小团队创作</view>

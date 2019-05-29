@@ -14,6 +14,7 @@ Page({
     no: '',
     img: 'xiao4.jpg',
     classname: [],
+    length:''
   },
   /**
    * 生命周期函数--监听页面加载
@@ -37,10 +38,13 @@ Page({
         wx.setStorageSync('teachinfo', res.data[0])
         var no = res.data[0].no
         var contact = res.data[0].contact
+        var classname = res.data
+        var length=classname.length
         that.setData({
           no: no,
           contact: contact,
-          classname:res.data
+          classname: classname,
+          length:length
         })
         console.log(this.data.classname)
       },
@@ -106,12 +110,12 @@ Page({
     })
   },
 
-  clicone: function() {
-    wx.navigateTo({
-      url: '../techaerlook/techaerlook',
+  // clicone: function() {
+  //   wx.navigateTo({
+  //     url: '../techaerlook/techaerlook',
 
-    })
-  },
+  //   })
+  // },
   my: function(res) {
     wx.navigateTo({
       url: '../../teacher/my/my',

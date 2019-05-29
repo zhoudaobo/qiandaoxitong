@@ -30,3 +30,7 @@
   color: #ccc;
   margin-right: 20rpx;
 }
+.bottom{
+  margin-top: 700rpx;
+  margin-left: 270rpx;
+}

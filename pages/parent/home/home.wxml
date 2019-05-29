@@ -1,8 +1,8 @@
 
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
-  <image class='png' src='http://119.23.210.79:8080/zhugeliang/upload/{{img}}'></image>
-    <!-- <open-data type="userAvatarUrl" class="png"></open-data> -->
+  <!-- <image class='png' src='http://119.23.210.79:8080/zhugeliang/upload/{{img}}'></image> -->
+    <open-data type="userAvatarUrl" class="png"></open-data>
     <view class="text-xl">{{username}}
       <text class="text-df">{{contact}}</text>
     </view>
@@ -31,6 +31,7 @@
       <text class="cuIcon-title text-orange "></text> 消息列表
     </view>
   </view>
+ <view wx:if="{{length>0}}">
   <view class="cu-list menu-avatar" wx:for="{{notice}}" >
     <view class="cu-item" data-content='{{item.content}}' data-release_time='{{item.release_time}}' data-username='{{item.username}}' data-title='{{item.title}}' bindtap='noticelist'>
       <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
@@ -44,8 +45,9 @@
       </view>
       <view class="action">
         <view class="text-grey text-xs">{{item.release_time}}</view>
-        
+        </view>
       </view>
-    </view>
   </view>
+  </view>
+<view wx:elif="{{length==0}}" class="notice1">暂时没有消息哟~ ~</view>
 </scroll-view>

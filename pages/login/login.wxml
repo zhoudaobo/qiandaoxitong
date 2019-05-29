@@ -23,11 +23,10 @@
           <button class="whi cu-btn block bg-blue margin-tb-sm lg" form-type="submit">登录</button>
         </view>
       </form>
+     
     </view>
-
+ <view class='bottom'>睿翼小团队创作</view>
   </block>
-
-
   <block wx:if="{{TabCur==1}}">
   <view class='faceslogin'>
     <view class='backg'>
@@ -37,5 +36,6 @@
     </view>
   <button class="whifa cu-btn block bg-blue margin-tb-sm lg" bindtap="takePhoto">登录</button>
   </view>
+  <view class='bottom1'>睿翼小团队创作</view>
   </block>
 </view>

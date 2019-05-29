@@ -2,9 +2,8 @@
   "usingComponents": {},
    "navigationBarBackgroundColor": "#3eb64a",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "教师",
+    "navigationBarTitleText": "人脸签到",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
-
 }

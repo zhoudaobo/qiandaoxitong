@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "我的签到情况",
-  "usingComponents": {
-    "ec-canvas": "../../../utils/ec-canvas/ec-canvas"
-  }
-}

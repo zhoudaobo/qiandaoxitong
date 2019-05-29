@@ -82,3 +82,10 @@ map,.mapBox{
 .scrollPage {
   height: 100vh;
 }
+.notice1{
+  margin-left: 290rpx;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+  font-family: 隶书；
+  
+}
