@@ -1,6 +1,11 @@
 <!--pages/facelogin/facelogin.wxml-->
 <view class='center'>
-<camera device-position="{{device}}" flash="auto" class='camera'></camera>
+
+
+<camera device-position="{{device}}" flash="auto" class='camera' ><cover-view></cover-view></camera>
+<!-- <image bindtap="devicePosition" class='cover-4' src='/images/zh.png'></image> -->
+
+
 <button type="primary" bindtap="takePhoto">签到</button>
 </view>
 <view class="cu-bar bg-white margin-top">

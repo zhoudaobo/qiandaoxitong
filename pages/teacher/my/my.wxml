@@ -31,7 +31,7 @@
   {{myinfo.classname}}大数据工程学院
   </view>
 </view> -->
-<view class="cu-bar bg-white margin-top height" bindtap='exit'>
+<view class="cu-bar bg-white margin-top height">
   <view class="action" >
     <text class="cuIcon-title text-orange "></text>      <text>退出：</text>
   </view>

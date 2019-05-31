@@ -136,9 +136,11 @@ Page({
 
   inlook: function (e) {
     var classid = e.target.dataset.classid
-console.log(e)
+    var classname = e.target.dataset.classname
+    console.log(classid)
+    console.log(classname)
     wx.navigateTo({
-      url: '../techaerll/techaerll?classid='+classid,
+      url: '../techaerll/techaerll?classid=' + classid + '&classname=' + classname,
 
     })
   },

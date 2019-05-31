@@ -19,6 +19,7 @@ Page({
     teacher: '',
     id: '',
     device: '',
+    tcsuid: '',
     week: [{
       'week': 0
     }, {
@@ -71,6 +72,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+
     console.log(options)
     var that = this;
     this.setData({
@@ -79,9 +81,10 @@ Page({
       classid: options.classid,
       subject: options.subject,
       teacher: options.teacher,
-      id: options.id
+      id: options.id,
+      tcsuid: options.tcsuid
     })
-    // console.log(that.data.id1)
+    console.log(that.data.tcsuid + 'qqq123456')
   },
 
   /**
@@ -166,28 +169,18 @@ Page({
           header: {
             'Content-Type': 'multipart/form-data'
           },
-          
           formData: {
             classid: that.data.classid,
             tcsuid: that.data.id,
-
           },
           success: function(re) {
             console.log(re)
-            // var jsonObj = JSON.parse(re.data);
-            // var tt = jsonObj.data;
-            // var list = [];
-            // console.log(tt)
-            // list.push(tt)
-            // that.setData({
-            //   itemLists: list
-            // })
             wx.showLoading({
               title: '签到完成',
               duration: 2000,
             })
-           wx.redirectTo({
-              url: '../../teacher/signList/signList?classid=' + that.data.classid + '&subject=' + that.data.subject + '&subjcname=' + that.data.subjcname + '&grade=' + that.data.grade +'&teacher='+that.data.teacher+'&id='+that.data.id,
+            wx.redirectTo({
+              url: '../../teacher/signList/signList?classid=' + that.data.classid + '&subject=' + that.data.subject + '&subjcname=' + that.data.subjcname + '&grade=' + that.data.grade + '&teacher=' + that.data.teacher + '&id=' + that.data.id,
             })
           }
         })
@@ -196,5 +189,7 @@ Page({
         console.log("complete");
       }
     });
+    console.log('wqeqwr' + this.data.tcsuid)
   }
+
 })

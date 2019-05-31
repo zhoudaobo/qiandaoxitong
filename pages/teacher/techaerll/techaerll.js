@@ -9,36 +9,8 @@ Page({
    */
   data: {
     calssid:'',
-    studentinfo: [{
-      id: 1,
-      studentID: "2017000",
-      name: '小王',
-      Checkin: "5",
-      Forcheckin: "3"
-    },
-    {
-      id: 2,
-      studentID: "2017001",
-      name: '小李',
-      Checkin: "5",
-      Forcheckin: "3"
-    },
-    {
-      id: 3,
-      studentID: "2017002",
-      name: '小王',
-      Checkin: "5",
-      Forcheckin: "3"
-    },
-    {
-      id: 4,
-      studentID: "2017003",
-      name: '小王',
-      Checkin: "5",
-      Forcheckin: "3"
-    }
-    ],
-
+    studentinfo: [],
+    classname:''
   },
 
 
@@ -54,11 +26,14 @@ Page({
    */
   onLoad: function (options) {
     var classid=options.classid
+    var classname = options.classname
+    console.log(classid)
     var id = myUtils.get('id')
     // 屏幕宽度
     this.setData({
       imageWidth: wx.getSystemInfoSync().windowWidth,
-      classid:classid
+      classid:classid,
+      classname:classname
     });
     console.log(this.data.classid);
 
@@ -70,7 +45,10 @@ Page({
       classid:this.data.classid
       },
       success:res=>{
-        console.log(res)
+      var list = res.list
+      this.setData({
+        studentinfo:list
+      })
       }
     })
 

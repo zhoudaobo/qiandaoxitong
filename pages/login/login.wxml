@@ -30,7 +30,7 @@
   <block wx:if="{{TabCur==1}}">
   <view class='faceslogin'>
     <view class='backg'>
-      <cover-view class='center'>
+      <cover-view>
         <camera device-position="front" flash="auto" class='camera'></camera>
       </cover-view>
     </view>

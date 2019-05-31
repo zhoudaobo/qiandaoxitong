@@ -77,7 +77,7 @@
       <view class="cu-list menu {{menuBorder?'':'sm-border'}} {{menuCard?'':'card-menu margin-top'}}">
 
         <view class="cu-item {{menuArrow?'':'arrow'}}" wx:for="{{classname}}" bindtap='inlook'>
-          <view class="content" data-classid='{{item.classid}}'>
+          <view class="content" data-classid='{{item.classid}}' data-classname='{{item.classname}}'>
             <text class="cuIcon-btn text-blue"></text>
             <text class="text-grey">{{item.classname}}</text>
           </view>

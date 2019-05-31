@@ -1,15 +1,15 @@
 /* pages/facelogin/facelogin.wxss */
 .camera{
  
-  width: 80%; 
-  height: 280px;
-  margin-left: 80rpx;
+  width: 100%; 
+  height: 350px;
+  /* margin-left: 80rpx; */
   margin-top: 40rpx;
   margin-bottom: 40rpx;
   
 }
 .center{
- background: url('http://image.chubanyun.net/images/TRQ/user-head.png');
+ /* background: url('http://image.chubanyun.net/images/TRQ/user-head.png'); */
 }
 .box {
   border-bottom: 1rpx solid rgb(211, 206, 206);
@@ -41,7 +41,7 @@
             /* text-align:center; */
             text-align: left;
         font-family: 微软雅黑;
-            font-size: 35rpx;
+  
             color: rgb(43, 41, 41);
             /* display: table-cell; */
             /* vertical-align:middle; */
@@ -79,3 +79,10 @@
   height: 3rem;
   align-items: center;
 }
+.cover-4{  
+  position: absolute;  
+  top: 50rpx;  
+  right:70rpx;  
+  height: 40rpx;
+  width:50rpx;
+  }  
