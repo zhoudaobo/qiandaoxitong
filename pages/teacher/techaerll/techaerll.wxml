@@ -1,5 +1,5 @@
 <view class='cu-tag round bg-blue light SignIn_one'>
-  17计本3近期签到情况</view>
+  {{classname}}近期签到情况</view>
 <view class="cu-bar bg-white solid-bottom margin-top">
 </view>
 
@@ -21,13 +21,13 @@
                     <view class="cu-item {{menuArrow?'arrow':''}}">
                       <view class="content">
                         <text class="cuIcon-tagfill text-red"></text>
-                        <text class="text-grey">{{item.studentID}}</text>
+                        <text class="text-grey">{{item.no}}</text>
                       </view>
                       <view class="action">
 
-                        <text class="cu-tag round bg-olive light">{{item.name}}</text>
-                        <text class="cu-tag round bg-olive light">{{item.Checkin}}</text>
-                        <text class="cu-tag round bg-olive light">{{item.Forcheckin}}</text>
+                        <text class="cu-tag round bg-olive light">{{item.stuname}}</text>
+                        <text class="cu-tag round bg-olive light">{{item.count}}</text>
+                        <!-- <text class="cu-tag round bg-olive light">{{item.Forcheckin}}</text> -->
                       </view>
                     </view>
                   </view>

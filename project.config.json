@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wxb119bd8bc5039086",
+	"appid": "wx6bd718af7ab69ac9",
 	"projectname": "qiandao",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,40 +40,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 0,
 			"list": [
 				{
-					"id": 3,
-					"name": "teacher",
-					"pathName": "pages/teacher/home/index",
-					"query": "",
-					"scene": null
-				},
-				{
 					"id": -1,
-					"name": "parent",
-					"pathName": "pages/parent/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "stu",
-					"pathName": "pages/student/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "my",
-					"pathName": "pages/teacher/my/my",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "list",
-					"pathName": "pages/teacher/signList/signList",
+					"name": "regiter",
+					"pathName": "pages/register/register",
 					"scene": null
 				}
 			]

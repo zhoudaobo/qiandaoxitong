@@ -11,6 +11,12 @@ height: 700rpx;
 margin-top:150rpx 
 }
 
+.register{
+  color: rgb(187, 183, 183);
+  width: 60rpx;
+  margin-left: 80%;
+  margin-bottom: 30rpx;
+}
 .faceslogin{
 background-color: white;
 height: 805rpx;

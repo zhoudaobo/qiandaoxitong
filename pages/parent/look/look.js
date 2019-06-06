@@ -35,14 +35,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('arqwerewqrew'+this.data.list)
     var that = this;
     var id = myUtils.get('id')
+    var preaMsage=myUtils.get('preaMsage')
+    var classid = preaMsage.classid
     http.getpare({
       data: {
-        id: id
+        id: id,
+        classid: classid
+
       },
       success: res => {
+        
         var list = res.data;
         var index = res.data.length;
         for (let i = 0; i < index; i++) {
@@ -79,22 +84,25 @@ Page({
       this.setOption(Chart); //更新数据
     }
     var id = myUtils.get('id')
+    console.log(id)
     http.datasee({
       data: {
         id: id
       },
       success: (res) => {
-        console.log(res)
+        console.log(res+'wqewqsafe4321')
+        console.log('ttt'+res)
         var list = []
         var list1 = []
         var length = res.list.length;
         for (let i = 0; i < length; i++) {
           var coursename = res.list[i].coursename;
+          console.log(coursename+'12431243124')
           var count = res.list[i].count;
           // count.push(count);
           list.push(coursename);
           list1.push(count)
-          console.log(list1)
+          console.log('yuyuuyuyuy'+list1)
           this.setData({
             list: list,
             list1: list1
@@ -140,6 +148,7 @@ Page({
       }]
     }
     return option;
+
   },
 
   /**

@@ -1,0 +1,54 @@
+<view class='yemian'>
+  <form bindsubmit="formSubmit">
+    <view class='kong'></view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTapone" focus="{{focusone}}" name="name" value='{{name}}' placeholder="请输入姓名" />
+    </view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTap" password='true' focus="{{focustow}}" name="pwd" value='{{pwd}}' placeholder="请输入密码" />
+    </view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTapone1" focus="{{focustree}}" name="rpwd" password='true' value='{{rpwd}}' placeholder="确认密码" />
+    </view>
+
+    <view class="itemView padding1">
+      <view class="weui-input section__title">选择出生日期：</view>
+      <picker mode="date" value="{{date}}" start="1898-09-01" end="2025-09-01" bindchange="bindDateChange">
+        <view class="weui-input">
+          {{date}}
+        </view>
+      </picker>
+
+    </view>
+  <!-- 选择性别 -->
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class=" radio" wx:for="{{gendur}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} </label>
+      </radio-group>
+
+    </view>
+    <!-- 选择角色 -->
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} </label>
+      </radio-group>
+
+    </view>
+
+    
+
+    <view class='myphoto'>
+      <view class='xiagnji' wx:if='{{length==0}}'>
+        <image bindtap='upUnload' class='icon' src='../../images/xx.png'></image>
+      </view>
+      <view class='xiagnji' elif>
+        <image bindtap='upUnload' class='icon' src='{{imgurl}}'></image>
+      </view>
+    </view>
+    <view class="padding">
+      <button class="whi cu-btn block bg-blue margin-tb-sm lg" form-type="submit" bindtap='register'>注册</button>
+    </view>
+  </form>
+</view>

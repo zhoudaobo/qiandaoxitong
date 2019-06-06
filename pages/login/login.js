@@ -56,6 +56,10 @@ Page({
     }
 
   },
+
+  toregister:function(){
+
+  },
   pwdinput: function (e) {
     this.setData({
       pwd: e.detail.value
@@ -78,35 +82,6 @@ Page({
     this.setData({
       focus: true
     })
-  },
-  // formSubmit: function (e) {
-  //   console.log(e.detail.value);//格式 Object {userName: "user", userPassword: "password"}
-  //   //获得表单数据
-  //   var objData = e.detail.value;
-  //   if (objData.userName && objData.userPassword) {
-  //     // 同步方式存储表单数据
-  //     wx.setStorageSync('userName', objData.userName);
-  //     wx.setStorageSync('userPassword', objData.userPassword);
-  //     //跳转到成功页面
-  //     wx.navigateTo({
-  //       url: '../index/index'
-  //     })
-
-  //   }
-
-  // },
-
-
-
-  // 人脸登陆
-  // pages/pp/pp.js
-
-
-
-
-
-  onShareAppMessage: function () {
-
   },
   devicePosition() {
     this.setData({
@@ -175,7 +150,6 @@ Page({
   },
   formSubmit: function (e) {
     var that = this;
-
     that.setData({
       no: e.detail.value.no,
       pwd: e.detail.value.pwd

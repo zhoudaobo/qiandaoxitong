@@ -17,7 +17,7 @@
 
     <!--课表-->
     <view wx:for="{{wlist}}">
-      <view class="flex-item kcb-item" bindtap="showCardView" data-classname='{{item.classname}}' data-subjcname='{{item.subjcname}}' data-statu="open" data-index="{{index}}" data-classromm='{{item.classromm}}' data-classid='{{item.classid}}' data-teacher='{{item.teacher}}' data-subject='{{item.subject}}' style="margin-left:{{(item.xqj-1)*100}}rpx;margin-top:{{(item.djj-1)*(2*100-5)+20}}rpx;height:{{2*100-5}}rpx;background-color:{{colorArrays[index%9]}}">
+      <view class="flex-item kcb-item" bindtap="showCardView" data-classname='{{item.classname}}' data-subjcname='{{item.subjcname}}' data-statu="open" data-index="{{index}}" data-classromm='{{item.classromm}}' data-classid='{{item.classid}}' data-id='{{item.id}}' data-teacher='{{item.teacher}}' data-subject='{{item.subject}}' style="margin-left:{{(item.xqj-1)*100}}rpx;margin-top:{{(item.djj-1)*(2*100-5)+20}}rpx;height:{{2*100-5}}rpx;background-color:{{colorArrays[index%9]}}">
         <view class="smalltext">{{item.subjcname}} {{item.classname}} {{'@'+item.roomname}}</view>
       </view>
     </view>

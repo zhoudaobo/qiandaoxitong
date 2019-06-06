@@ -15,10 +15,11 @@ Page({
     console.log(res)
     var that = this;
     var id = myUtils.get("id");
+    console.log(id)
     this.setData({
       id: id,
     })
-    // console.log(this.data.id)
+    // console.log('qweqwrwqrwqer'+this.data.id)
     http.gettime({
       data: {
         id: this.data.id,
@@ -54,7 +55,7 @@ Page({
     var teacher = res.currentTarget.dataset.teacher
     var subjcname = res.currentTarget.dataset.subjcname
     var id = res.currentTarget.dataset.id
-
+    console.log(id)
     // 页面跳转并传值
     wx.navigateTo({
       url: '../../teacher/signList/signList?subjcname=' + subjcname + '&grade=' + grade + '&classid=' + classid + '&subject=' + subject + '&teacher=' + teacher+'&id='+id,

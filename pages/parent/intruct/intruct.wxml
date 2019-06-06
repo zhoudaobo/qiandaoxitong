@@ -124,7 +124,7 @@
   <view class="grid col-3 padding-sm">
     <view class="padding-sm" wx:for="{{ColorList}}" wx:key>
       <view class="bg-{{item.url}} padding radius text-center shadow-blur">
-        <image src='{{item.url}}' style='height:200rpx;width:220rpx;'></image>
+        <image src='{{item.url}}' style='height:200rpx;width:220rpx; '></image>
         <view class="text-lg"></view>
         <view class="margin-top-sm text-Abc">{{item.title}}</view>
       </view>

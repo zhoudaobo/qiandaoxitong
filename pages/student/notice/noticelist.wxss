@@ -5,8 +5,8 @@
   width:120rpx;
   font-size: 30rpx;
   padding: 20rpx;
-  background-color: #efeff4;
-  color:#aaaaaa;
+   background-color: white;
+    color:#aaaaaa;
   margin: 30rpx;
 }
 .title{
@@ -30,6 +30,8 @@
   right:46rpx;
 }
 .content{
+  background-color: white;
+  height: 600rpx;
   padding: 20rpx;
   font-size: 14px;
   line-height: 1.5;
@@ -46,4 +48,7 @@
 .line{
   border-bottom: 1rpx solid gainsboro;
   margin-top: 15rpx;
+}
+.header{
+  background-color: white
 }

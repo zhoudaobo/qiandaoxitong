@@ -14,7 +14,8 @@ Page({
     teacher: '',
     id: '',
     wqd: '',
-    yq: ''
+    yq: '',
+    tcsuid:''
   },
 
 
@@ -30,6 +31,7 @@ Page({
     var id = options.id
     var that = this;
     that.setData({
+      tcsuid: tcsuid,
       grade: options.grade,
       subjcname: options.subjcname,
       classid: options.classid,
@@ -88,9 +90,10 @@ Page({
     var teacher = this.data.teacher
     var subjcname = this.data.subjcname
     var id = this.data.id
-    // console.log(teacher)
+    var tcsuid = this.data.tcsuid
+    console.log(tcsuid+'qweqe1231232')
     wx.navigateTo({
-      url: '../../teacher/SignIn/SignIn?subjcname=' + subjcname + '&grade=' + grade + '&classid=' + classid + '&subject=' + subject + '&teacher=' + teacher + '&id=' + id
+      url: '../../teacher/SignIn/SignIn?subjcname=' + subjcname + '&grade=' + grade + '&classid=' + classid + '&subject=' + subject + '&teacher=' + teacher + '&id=' + id + '&tcsuid=' + tcsuid
     })
   },
   onPullDownRefresh: function() {

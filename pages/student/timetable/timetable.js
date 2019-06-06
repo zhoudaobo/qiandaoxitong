@@ -9,7 +9,8 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    var classid = myUtils.get("classid");
+    var stuinfo=myUtils.get('stuinfo')
+    var classid = stuinfo.classid
     console.log(classid)
     http.studentgettime({
       data: {

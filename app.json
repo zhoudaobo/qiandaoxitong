@@ -15,12 +15,13 @@
     "pages/teacher/SignIn/SignIn",
     "pages/teacher/signList/signList",
     "pages/parent/intruct/intruct",
-    "pages/parent/look/look"
+    "pages/parent/look/look",
+    "pages/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "人脸签到",
+    "navigationBarTitleText": "睿翼微签",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

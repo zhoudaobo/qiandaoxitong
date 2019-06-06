@@ -1,6 +1,4 @@
-// pages/pp/pp.js
 import http from '../../../utils/api' // 引入api接口管理文件
-// var app =getApp()
 Page({
   /**
    * 页面的初始数据
@@ -19,6 +17,7 @@ Page({
     teacher: '',
     id: '',
     device: '',
+    tcsuid: '',
     week: [{
       'week': 0
     }, {
@@ -71,6 +70,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+
     console.log(options)
     var that = this;
     this.setData({
@@ -79,57 +79,10 @@ Page({
       classid: options.classid,
       subject: options.subject,
       teacher: options.teacher,
-      id: options.id
+      id: options.id,
+      tcsuid: options.tcsuid
     })
-    // console.log(that.data.id1)
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+    console.log(that.data.tcsuid + 'qqq123456')
   },
   devicePosition() {
     this.setData({
@@ -166,28 +119,18 @@ Page({
           header: {
             'Content-Type': 'multipart/form-data'
           },
-          
           formData: {
             classid: that.data.classid,
             tcsuid: that.data.id,
-
           },
           success: function(re) {
             console.log(re)
-            // var jsonObj = JSON.parse(re.data);
-            // var tt = jsonObj.data;
-            // var list = [];
-            // console.log(tt)
-            // list.push(tt)
-            // that.setData({
-            //   itemLists: list
-            // })
             wx.showLoading({
               title: '签到完成',
               duration: 2000,
             })
-           wx.redirectTo({
-              url: '../../teacher/signList/signList?classid=' + that.data.classid + '&subject=' + that.data.subject + '&subjcname=' + that.data.subjcname + '&grade=' + that.data.grade +'&teacher='+that.data.teacher+'&id='+that.data.id,
+            wx.redirectTo({
+              url: '../../teacher/signList/signList?classid=' + that.data.classid + '&subject=' + that.data.subject + '&subjcname=' + that.data.subjcname + '&grade=' + that.data.grade + '&teacher=' + that.data.teacher + '&id=' + that.data.id,
             })
           }
         })
@@ -196,5 +139,7 @@ Page({
         console.log("complete");
       }
     });
+    console.log('wqeqwr' + this.data.tcsuid)
   }
+
 })
