@@ -1,4 +1,7 @@
-<!--index.wxml-->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我的课表</view>
+</cu-custom>
 <view class="top">
   <view wx:for="{{['一','二','三','四','五','六','日']}}" class="top-text">周{{item}}</view>
 </view>

@@ -1,0 +1,67 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">登录</view>
+</cu-custom>
+<view class='yemian'>
+  <form bindsubmit="formSubmit">
+    <view class='kong'></view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTapone" focus="{{focusone}}" name="name" value='{{name}}' placeholder="请输入姓名" />
+    </view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTap" password='true' focus="{{focustow}}" name="pwd" value='{{pwd}}' placeholder="请输入密码" />
+    </view>
+    <view class="itemView padding1">
+      <input class="weui-input" bindtap="bindButtonTapone1" focus="{{focustree}}" name="rpwd" password='true' value='{{rpwd}}' placeholder="确认密码" />
+    </view>
+
+    <view class="itemView padding1">
+      <view class="weui-input section__title">选择出生日期：</view>
+       <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input value='{{time}}' placeholder='选择时间'/>
+  </picker>
+    </view>
+  <!-- 选择性别 -->
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange1">
+        <label class=" radio" wx:for="{{gendur}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} </label>
+      </radio-group>
+
+    </view>
+    <!-- 选择角色 -->
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.value}}" />{{item.value}} </label>
+      </radio-group>
+
+    </view>
+
+    
+
+    <view class='myphoto'>
+      <view class='xiagnji' wx:if='{{length==0}}'>
+        <image bindtap='upUnload' class='icon' src='../../images/xx.png'></image>
+      </view>
+      <view class='xiagnji' elif>
+        <image bindtap='upUnload' class='icon' src='{{imgurl}}'></image>
+      </view>
+    </view>
+    <view class="padding">
+      <button class="whi cu-btn block bg-blue margin-tb-sm lg" form-type="submit" bindtap='register'>注册</button>
+    </view>
+  </form>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+ 
+<view class="modalDlg" wx:if="{{showModal}}">
+<view class='text'>
+    <text>注：
+    一，注册时请确保您是凯里学院的老师、学生和学生家长，若不是上述人员请勿注册，造成损失将追究刑事责任
+    二、注册时请按照提示正确填写信息，照片必须是本人的照片，否则将会影响到人脸识别登录与签到，对您造成的影响我们概不负责</text>
+    </view>
+    <button bindtap="go" class=" cu-btn  bg-blue close">关闭</button>
+</view>
+ 
+<button bindtap="submit" class="whi cu-btn block bg-blue margin-tb-sm lg zhuce">注册须知</button>
+</view>

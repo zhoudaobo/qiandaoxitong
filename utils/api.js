@@ -48,6 +48,12 @@ function stuSubArr(params) {//获取学生每节课的签到次数
 function getzhuanye(params) {//获取学生每节课的签到次数
   http('/school', 'post', params)
 }
+function reg(params) {//获取学生每节课的签到次数
+  http('/school', 'post', params)
+}
+function subSign(params) {//注册接口
+  http('/subSign', 'post', params)
+}
 export default { // 暴露接口
   getInfo,
   getnotice,
@@ -62,6 +68,8 @@ export default { // 暴露接口
   datasee,
   classArr,
   stuSubArr,
-  getzhuanye
+  getzhuanye,
+  reg,
+  subSign
   // getsign,
 }

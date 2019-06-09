@@ -1,19 +1,34 @@
-<!--pages/facelogin/facelogin.wxml-->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">签到</view>
+</cu-custom>
 <view class='center'>
-
-
 <camera device-position="{{device}}" flash="auto" class='camera' ><cover-view></cover-view></camera>
+ 
 <!-- <image bindtap="devicePosition" class='cover-4' src='/images/zh.png'></image> -->
+ 
 
+ 
 
-<button type="primary" bindtap="takePhoto">签到</button>
+ 
+<button type="primary" bindtap="takePhoto"  class="whi cu-btn block bg-blue margin-tb-sm lg">签到</button>
+  
 </view>
+ 
 <view class="cu-bar bg-white margin-top">
+ 
   <view class="action">
+ 
     <text class="cuIcon-title text-blue"></text><view class="section">
+ 
   <picker bindchange="bindPickerChange" value="{{week[e.detail.value].week}}" range="{{week}}"  range-key="{{'week'}}">
+ 
     <view class="picker">周次：{{'第'+week[index].week+'周'}}</view>
+ 
   </picker>
+ 
 </view>
+ 
   </view>
+ 
 </view>

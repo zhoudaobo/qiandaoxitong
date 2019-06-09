@@ -47,6 +47,7 @@ Page({
 
       },
       success: res => {
+        
         var list = res.data;
         var index = res.data.length;
         for (let i = 0; i < index; i++) {

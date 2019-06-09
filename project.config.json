@@ -40,8 +40,19 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": -1,
-			"list": []
+			"list": [],
+
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "regiter",
+					"pathName": "pages/register/register",
+					"scene": null
+				}
+			]
 		}
 	}
 }
