@@ -1,3 +1,7 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">个人中心</view>
+</cu-custom>
 <view class="cu-bar bg-white margin-top height">
   <view class="action">
     <text class="cuIcon-title text-orange "></text>     <text>姓名：</text>

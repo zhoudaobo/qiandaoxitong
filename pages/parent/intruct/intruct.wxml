@@ -1,4 +1,7 @@
-<!--导航菜单-->
+<cu-custom bgImage="http://img1.imgtn.bdimg.com/it/u=73174781,3928985372&fm=15&gp=0.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">学校简介</view>
+</cu-custom>
 <view class="navbar" style=" z-index:50">
   <!--循环-->
   <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">

@@ -1,3 +1,7 @@
+<cu-custom bgImage="http://img1.imgtn.bdimg.com/it/u=73174781,3928985372&fm=15&gp=0.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">索引</view>
+</cu-custom>
  <view class='cu-tag round bg-blue light SignIn_one'>孩子签到情况</view>
 <view class="Visualization ">
   <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>

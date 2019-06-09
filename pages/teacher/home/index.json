@@ -2,7 +2,7 @@
   "usingComponents": {},
    "navigationBarBackgroundColor": "#3eb64a",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "人脸签到",
+    "navigationBarTitleText": "睿翼微签",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false

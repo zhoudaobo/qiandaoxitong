@@ -1,6 +1,6 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "家长",
+  "navigationBarTitleText": "睿翼微签",
   "navigationBarBackgroundColor": "#3eb64a",
   "ec-canvas": "../../utils/ec-canvas/ec-canvas"
 }

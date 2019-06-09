@@ -1,41 +1,76 @@
-<view class='facecss'>
-
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" >
+  <view slot="backText"></view>
+  <view slot="content">登录</view>
+</cu-custom>
+<view class='facecss '>
 
   <scroll-view scroll-x class="margin-top bg-white nav text-center fixed" style="top:{{CustomBar}}px">
+ 
     <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
       {{tabNav[index]}}
     </view>
+ 
   </scroll-view>
 
   <block wx:if="{{TabCur==0}}">
+ 
     <view class='fcss'  >
+ 
       <form bindsubmit="formSubmit">
-        <view class="itemView padding1">
+ 
+        <view class="itemView padding1 ">
+ 
           <image class='keyImage' src='../../images/username.png'></image>
+ 
           <input class="weui-input" bindtap="bindButtonTapone"  focus="{{focusone}}" name="no" bindinput="noinput" value='{{no}}' placeholder="请输入账号" />
-        </view>
-        <view class="itemView">
-          <image class='keyImage' src='../../images/userkey.png'></image>
-         <input class="weui-input" bindtap="bindButtonTap" focus="{{focus}}"  type="password" name="pwd" bindinput="pwdinput" placeholder="请输入密码" value='{{pwd}}'/>
  
         </view>
-        <view class="padding">
-          <button class="whi cu-btn block bg-blue margin-tb-sm lg" form-type="submit">登录</button>
+ 
+        <view class="itemView">
+ 
+          <image class='keyImage' src='../../images/userkey.png'></image>
+ 
+         <input class="weui-input" bindtap="bindButtonTap" focus="{{focus}}"  type="password" name="pwd" bindinput="pwdinput" placeholder="请输入密码" value='{{pwd}}'/>
         </view>
-      </form>
+ 
+        <view class="padding">
+ 
+          <button class="whi cu-btn block bg-blue margin-tb-sm lg" form-type="submit">登录</button>
+ 
+        </view>
      
+ 
+      </form>
+ 
+         <view class="padding">
+ 
+          <button class="whi cu-btn block bg-blue" bindtap='zhuce'>注册</button>
+ 
+        </view>
+ 
     </view>
+ 
  <view class='bottom'>睿翼小团队创作</view>
+ 
   </block>
+ 
   <block wx:if="{{TabCur==1}}">
-  <view class='faceslogin'>
+ 
+  <view class='faceslogin gdsj'>
+ 
     <view class='backg'>
+ 
       <cover-view>
+ 
         <camera device-position="front" flash="auto" class='camera'></camera>
+ 
       </cover-view>
+ 
     </view>
-  <button class="whifa cu-btn block bg-blue margin-tb-sm lg" bindtap="takePhoto">登录</button>
   </view>
+ 
   <view class='bottom1'>睿翼小团队创作</view>
+ 
   </block>
+ 
 </view>

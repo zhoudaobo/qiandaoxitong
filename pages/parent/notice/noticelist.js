@@ -1,7 +1,6 @@
 // pages/student/notice/noticelist.js
 import http from '../../../utils/api' // 引入api接口管理文件
 Page({
-
    /**
     * 页面的初始数据
     */

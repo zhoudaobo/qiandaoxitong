@@ -1,3 +1,7 @@
+<cu-custom bgImage="http://img1.imgtn.bdimg.com/it/u=73174781,3928985372&fm=15&gp=0.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">索引</view>
+</cu-custom>
 <view class="cu-bar bg-white margin-top height">
   <view class="action">
     <text class="cuIcon-title text-orange "></text>     <text>姓名：</text>

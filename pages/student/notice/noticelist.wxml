@@ -1,3 +1,7 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我的课表</view>
+</cu-custom>
 <view class="page">
   <view class="header">
     <view class="cate">通知</view>
